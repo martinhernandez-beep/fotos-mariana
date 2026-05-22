@@ -650,6 +650,7 @@
       border-radius: 12px;
       border: 1px solid var(--rose-pale);
     }
+
     .multi-opt-label {
       font-size: 14px;
       font-weight: 600;
@@ -657,9 +658,11 @@
       display: block;
       margin-bottom: 8px;
     }
+
     .multi-orient-group {
       text-align: center;
     }
+
     .multi-orient-btns {
       display: flex;
       gap: 8px;
@@ -668,6 +671,7 @@
       border-radius: 8px;
       border: 1px solid var(--rose-light);
     }
+
     .multi-orient-btn {
       padding: 6px 12px;
       border-radius: 6px;
@@ -680,13 +684,21 @@
       gap: 6px;
       transition: all 0.2s;
     }
-    .multi-orient-btn input { display: none; }
+
+    .multi-orient-btn input {
+      display: none;
+    }
+
     .multi-orient-btn.selected {
       background: var(--rose);
       color: white;
     }
-    .mo-icon { font-size: 16px; line-height: 1; }
-    
+
+    .mo-icon {
+      font-size: 16px;
+      line-height: 1;
+    }
+
     .multi-same-toggle {
       display: flex;
       flex-direction: column;
@@ -695,7 +707,11 @@
       cursor: pointer;
       gap: 6px;
     }
-    .multi-same-toggle input { display: none; }
+
+    .multi-same-toggle input {
+      display: none;
+    }
+
     .toggle-track {
       width: 44px;
       height: 24px;
@@ -704,6 +720,7 @@
       position: relative;
       transition: background 0.3s;
     }
+
     .toggle-thumb {
       position: absolute;
       top: 2px;
@@ -712,13 +729,15 @@
       height: 20px;
       background: white;
       border-radius: 50%;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
     }
-    .multi-same-toggle input:checked + .toggle-track {
+
+    .multi-same-toggle input:checked+.toggle-track {
       background: var(--rose);
     }
-    .multi-same-toggle input:checked + .toggle-track .toggle-thumb {
+
+    .multi-same-toggle input:checked+.toggle-track .toggle-thumb {
       transform: translateX(20px);
     }
 
@@ -745,17 +764,22 @@
       user-select: none;
       min-width: 90px;
     }
+
     .grid-count-option:hover {
       border-color: var(--rose);
       transform: translateY(-2px);
-      box-shadow: 0 4px 14px rgba(201,107,126,.18);
+      box-shadow: 0 4px 14px rgba(201, 107, 126, .18);
     }
+
     .grid-count-option.selected {
       border-color: var(--rose);
       background: var(--rose-pale);
-      box-shadow: 0 4px 14px rgba(201,107,126,.22);
+      box-shadow: 0 4px 14px rgba(201, 107, 126, .22);
     }
-    .grid-count-option input[type=radio] { display: none; }
+
+    .grid-count-option input[type=radio] {
+      display: none;
+    }
 
     .grid-count-label {
       font-family: 'Cormorant Garamond', serif;
@@ -763,6 +787,7 @@
       font-weight: 600;
       color: var(--rose-dark);
     }
+
     .grid-count-sublabel {
       font-size: 11px;
       color: var(--text-soft);
@@ -775,14 +800,22 @@
       gap: 3px;
       width: 60px;
     }
-    .mosaic-2cols { grid-template-columns: 1fr 1fr; }
-    .mosaic-3cols { grid-template-columns: 1fr 1fr 1fr; }
+
+    .mosaic-2cols {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .mosaic-3cols {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
     .mosaic-cell {
       background: var(--rose-light);
       border-radius: 3px;
       height: 12px;
       transition: background 0.2s;
     }
+
     .grid-count-option.selected .mosaic-cell {
       background: var(--rose);
     }
@@ -799,11 +832,13 @@
       position: relative;
       margin-bottom: 20px;
     }
+
     .multi-drop-zone:hover,
     .multi-drop-zone.dragover {
       border-color: var(--rose);
       background: var(--rose-pale);
     }
+
     .multi-drop-zone input[type=file] {
       position: absolute;
       inset: 0;
@@ -820,6 +855,7 @@
       margin-bottom: 4px;
       min-height: 0;
     }
+
     .multi-preview-item {
       position: relative;
       aspect-ratio: 1;
@@ -827,17 +863,19 @@
       overflow: hidden;
       animation: popIn 0.25s ease;
     }
+
     .multi-preview-item img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
     }
+
     .multi-preview-item .remove-btn {
       position: absolute;
       top: 4px;
       right: 4px;
-      background: rgba(139,58,82,.85);
+      background: rgba(139, 58, 82, .85);
       color: white;
       border: none;
       border-radius: 50%;
@@ -851,7 +889,10 @@
       opacity: 0;
       transition: opacity 0.15s;
     }
-    .multi-preview-item:hover .remove-btn { opacity: 1; }
+
+    .multi-preview-item:hover .remove-btn {
+      opacity: 1;
+    }
 
     .slot-empty {
       aspect-ratio: 1;
@@ -975,16 +1016,29 @@
     <div class="card" id="multiCard">
       <div class="step-label">Extra ✨</div>
       <h2>Múltiples fotos por página</h2>
-      <p class="desc">¿Quieres imprimir un mosaico con 4, 6, 8 o 12 fotos en una sola hoja? Elige cuántas, sube las imágenes y genera el PDF. 🌷</p>
+      <p class="desc">¿Quieres imprimir un mosaico con 1x2, 4, 6, 8 o 12 fotos en una sola hoja? Elige cuántas, sube las
+        imágenes y genera el PDF. 🌷</p>
 
       <!-- Selector de cantidad -->
       <div class="grid-count-options" id="gridCountOptions">
 
+        <label class="grid-count-option" id="gc2">
+          <input type="radio" name="gridCount" value="2">
+          <div class="mosaic-diagram mosaic-1col">
+            <div class="mosaic-cell"></div>
+            <div class="mosaic-cell"></div>
+          </div>
+          <span class="grid-count-label">1x2</span>
+          <span class="grid-count-sublabel">2 fotos</span>
+        </label>
+
         <label class="grid-count-option selected" id="gc4">
           <input type="radio" name="gridCount" value="4" checked>
           <div class="mosaic-diagram mosaic-2cols">
-            <div class="mosaic-cell"></div><div class="mosaic-cell"></div>
-            <div class="mosaic-cell"></div><div class="mosaic-cell"></div>
+            <div class="mosaic-cell"></div>
+            <div class="mosaic-cell"></div>
+            <div class="mosaic-cell"></div>
+            <div class="mosaic-cell"></div>
           </div>
           <span class="grid-count-label">4</span>
           <span class="grid-count-sublabel">2 × 2</span>
@@ -993,8 +1047,12 @@
         <label class="grid-count-option" id="gc6">
           <input type="radio" name="gridCount" value="6">
           <div class="mosaic-diagram mosaic-3cols">
-            <div class="mosaic-cell"></div><div class="mosaic-cell"></div><div class="mosaic-cell"></div>
-            <div class="mosaic-cell"></div><div class="mosaic-cell"></div><div class="mosaic-cell"></div>
+            <div class="mosaic-cell"></div>
+            <div class="mosaic-cell"></div>
+            <div class="mosaic-cell"></div>
+            <div class="mosaic-cell"></div>
+            <div class="mosaic-cell"></div>
+            <div class="mosaic-cell"></div>
           </div>
           <span class="grid-count-label">6</span>
           <span class="grid-count-sublabel">2 × 3</span>
@@ -1003,10 +1061,14 @@
         <label class="grid-count-option" id="gc8">
           <input type="radio" name="gridCount" value="8">
           <div class="mosaic-diagram mosaic-2cols">
-            <div class="mosaic-cell"></div><div class="mosaic-cell"></div>
-            <div class="mosaic-cell"></div><div class="mosaic-cell"></div>
-            <div class="mosaic-cell"></div><div class="mosaic-cell"></div>
-            <div class="mosaic-cell"></div><div class="mosaic-cell"></div>
+            <div class="mosaic-cell"></div>
+            <div class="mosaic-cell"></div>
+            <div class="mosaic-cell"></div>
+            <div class="mosaic-cell"></div>
+            <div class="mosaic-cell"></div>
+            <div class="mosaic-cell"></div>
+            <div class="mosaic-cell"></div>
+            <div class="mosaic-cell"></div>
           </div>
           <span class="grid-count-label">8</span>
           <span class="grid-count-sublabel">2 × 4</span>
@@ -1015,10 +1077,18 @@
         <label class="grid-count-option" id="gc12">
           <input type="radio" name="gridCount" value="12">
           <div class="mosaic-diagram mosaic-3cols">
-            <div class="mosaic-cell"></div><div class="mosaic-cell"></div><div class="mosaic-cell"></div>
-            <div class="mosaic-cell"></div><div class="mosaic-cell"></div><div class="mosaic-cell"></div>
-            <div class="mosaic-cell"></div><div class="mosaic-cell"></div><div class="mosaic-cell"></div>
-            <div class="mosaic-cell"></div><div class="mosaic-cell"></div><div class="mosaic-cell"></div>
+            <div class="mosaic-cell"></div>
+            <div class="mosaic-cell"></div>
+            <div class="mosaic-cell"></div>
+            <div class="mosaic-cell"></div>
+            <div class="mosaic-cell"></div>
+            <div class="mosaic-cell"></div>
+            <div class="mosaic-cell"></div>
+            <div class="mosaic-cell"></div>
+            <div class="mosaic-cell"></div>
+            <div class="mosaic-cell"></div>
+            <div class="mosaic-cell"></div>
+            <div class="mosaic-cell"></div>
           </div>
           <span class="grid-count-label">12</span>
           <span class="grid-count-sublabel">3 × 4</span>
@@ -1062,7 +1132,8 @@
         <input type="file" id="multiFileInput"
           accept="image/jpeg,image/jpg,image/png,image/gif,image/webp,image/bmp,.heic,.heif">
         <span style="font-size:32px;display:block;margin-bottom:8px">🖼️</span>
-        <strong style="color:var(--rose-dark);font-family:'Cormorant Garamond',serif;font-size:18px" id="multiDropLabel">
+        <strong style="color:var(--rose-dark);font-family:'Cormorant Garamond',serif;font-size:18px"
+          id="multiDropLabel">
           Toca aquí para elegir fotos
         </strong>
         <p style="margin:6px 0 0;color:var(--text-soft);font-size:13px" id="multiDropHint">
@@ -1071,8 +1142,7 @@
       </div>
 
       <!-- Vista previa con slots vacíos -->
-      <div class="multi-preview-grid" id="multiPreviewGrid"
-           style="grid-template-columns:repeat(2,1fr)"></div>
+      <div class="multi-preview-grid" id="multiPreviewGrid" style="grid-template-columns:repeat(2,1fr)"></div>
 
       <!-- Estado -->
       <div class="status" id="multiStatus"></div>
@@ -1459,273 +1529,277 @@
     });
 
 
-  // ────────────────────────────────────────────────
-  // Multi-foto por página — lógica completa
-  // ────────────────────────────────────────────────
+    // ────────────────────────────────────────────────
+    // Multi-foto por página — lógica completa
+    // ────────────────────────────────────────────────
 
-  (function initMultiPhoto() {
-    // --- State ---
-    let multiFiles = [];
-    let gridCount  = 4;
-    let sameImage  = false;   // repetir 1 imagen
-    let landscape  = false;   // orientación horizontal
+    (function initMultiPhoto() {
+      // --- State ---
+      let multiFiles = [];
+      let gridCount = 4;
+      let sameImage = false;   // repetir 1 imagen
+      let landscape = false;   // orientación horizontal
 
-    // --- DOM ---
-    const gcOptions    = document.querySelectorAll('.grid-count-option');
-    const gcRadios     = document.querySelectorAll('input[name="gridCount"]');
-    const moRadios     = document.querySelectorAll('input[name="multiOrient"]');
-    const moBtns       = document.querySelectorAll('.multi-orient-btn');
-    const chkSame      = document.getElementById('chkSameImg');
-    const multiDrop    = document.getElementById('multiDropZone');
-    const multiInput   = document.getElementById('multiFileInput');
-    const dropLabel    = document.getElementById('multiDropLabel');
-    const dropHint     = document.getElementById('multiDropHint');
-    const previewGrid  = document.getElementById('multiPreviewGrid');
-    const multiStatus  = document.getElementById('multiStatus');
-    const btnMultiPdf  = document.getElementById('btnMultiPdf');
-    const btnMultiClr  = document.getElementById('btnMultiClear');
+      // --- DOM ---
+      const gcOptions = document.querySelectorAll('.grid-count-option');
+      const gcRadios = document.querySelectorAll('input[name="gridCount"]');
+      const moRadios = document.querySelectorAll('input[name="multiOrient"]');
+      const moBtns = document.querySelectorAll('.multi-orient-btn');
+      const chkSame = document.getElementById('chkSameImg');
+      const multiDrop = document.getElementById('multiDropZone');
+      const multiInput = document.getElementById('multiFileInput');
+      const dropLabel = document.getElementById('multiDropLabel');
+      const dropHint = document.getElementById('multiDropHint');
+      const previewGrid = document.getElementById('multiPreviewGrid');
+      const multiStatus = document.getElementById('multiStatus');
+      const btnMultiPdf = document.getElementById('btnMultiPdf');
+      const btnMultiClr = document.getElementById('btnMultiClear');
 
-    // --- Helpers ---
-    function colsForCount(n) {
-      return (n === 6 || n === 12) ? 3 : 2;
-    }
-
-    function showMultiStatus(type, icon, text) {
-      multiStatus.className = 'status ' + type;
-      multiStatus.innerHTML =
-        (type === 'info' ? `<div class="spinner"></div>` : `<span>${icon}</span>`) +
-        `<span>${text}</span>`;
-    }
-
-    function fileToDataURLMulti(file) {
-      return new Promise((res, rej) => {
-        const r = new FileReader();
-        r.onload  = e => res(e.target.result);
-        r.onerror = rej;
-        r.readAsDataURL(file);
-      });
-    }
-
-    function isImg(f) { return f.type.startsWith('image/'); }
-
-    // --- Update drop zone label based on mode ---
-    function updateDropZoneUI() {
-      if (sameImage) {
-        dropLabel.textContent = 'Elige UNA imagen para repetir';
-        dropHint.textContent  = 'Se copiará ' + gridCount + ' veces en la hoja';
-        multiInput.removeAttribute('multiple');
-      } else {
-        dropLabel.textContent = 'Toca aquí para elegir fotos';
-        dropHint.textContent  = 'o arrastra y suelta · JPG, PNG, GIF, BMP';
-        multiInput.setAttribute('multiple', '');
+      // --- Helpers ---
+      function colsForCount(n) {
+        if (n === 2) {
+          return landscape ? 2 : 1;
+        }
+        return (n === 6 || n === 12) ? 3 : 2;
       }
-    }
 
-    // --- Grid count radios ---
-    gcRadios.forEach(r => {
-      r.addEventListener('change', () => {
-        gridCount = parseInt(r.value);
-        gcOptions.forEach(o => o.classList.remove('selected'));
-        r.closest('.grid-count-option').classList.add('selected');
+      function showMultiStatus(type, icon, text) {
+        multiStatus.className = 'status ' + type;
+        multiStatus.innerHTML =
+          (type === 'info' ? `<div class="spinner"></div>` : `<span>${icon}</span>`) +
+          `<span>${text}</span>`;
+      }
+
+      function fileToDataURLMulti(file) {
+        return new Promise((res, rej) => {
+          const r = new FileReader();
+          r.onload = e => res(e.target.result);
+          r.onerror = rej;
+          r.readAsDataURL(file);
+        });
+      }
+
+      function isImg(f) { return f.type.startsWith('image/'); }
+
+      // --- Update drop zone label based on mode ---
+      function updateDropZoneUI() {
+        if (sameImage) {
+          dropLabel.textContent = 'Elige UNA imagen para repetir';
+          dropHint.textContent = 'Se copiará ' + gridCount + ' veces en la hoja';
+          multiInput.removeAttribute('multiple');
+        } else {
+          dropLabel.textContent = 'Toca aquí para elegir fotos';
+          dropHint.textContent = 'o arrastra y suelta · JPG, PNG, GIF, BMP';
+          multiInput.setAttribute('multiple', '');
+        }
+      }
+
+      // --- Grid count radios ---
+      gcRadios.forEach(r => {
+        r.addEventListener('change', () => {
+          gridCount = parseInt(r.value);
+          gcOptions.forEach(o => o.classList.remove('selected'));
+          r.closest('.grid-count-option').classList.add('selected');
+          updateDropZoneUI();
+          renderMultiPreview();
+        });
+      });
+      gcOptions.forEach(lbl => {
+        lbl.addEventListener('click', () => {
+          const r = lbl.querySelector('input[type=radio]');
+          r.checked = true;
+          r.dispatchEvent(new Event('change'));
+        });
+      });
+
+      // --- Orientation radios ---
+      moRadios.forEach(r => {
+        r.addEventListener('change', () => {
+          landscape = r.value === 'landscape';
+          moBtns.forEach(b => b.classList.remove('selected'));
+          r.closest('.multi-orient-btn').classList.add('selected');
+          renderMultiPreview();
+        });
+      });
+      moBtns.forEach(lbl => {
+        lbl.addEventListener('click', () => {
+          const r = lbl.querySelector('input[type=radio]');
+          r.checked = true;
+          r.dispatchEvent(new Event('change'));
+        });
+      });
+
+      // --- Same-image toggle ---
+      chkSame.addEventListener('change', () => {
+        sameImage = chkSame.checked;
+        // in same-image mode keep only 1 file
+        if (sameImage && multiFiles.length > 1) {
+          multiFiles = [multiFiles[0]];
+        }
         updateDropZoneUI();
         renderMultiPreview();
       });
-    });
-    gcOptions.forEach(lbl => {
-      lbl.addEventListener('click', () => {
-        const r = lbl.querySelector('input[type=radio]');
-        r.checked = true;
-        r.dispatchEvent(new Event('change'));
-      });
-    });
 
-    // --- Orientation radios ---
-    moRadios.forEach(r => {
-      r.addEventListener('change', () => {
-        landscape = r.value === 'landscape';
-        moBtns.forEach(b => b.classList.remove('selected'));
-        r.closest('.multi-orient-btn').classList.add('selected');
-      });
-    });
-    moBtns.forEach(lbl => {
-      lbl.addEventListener('click', () => {
-        const r = lbl.querySelector('input[type=radio]');
-        r.checked = true;
-        r.dispatchEvent(new Event('change'));
-      });
-    });
-
-    // --- Same-image toggle ---
-    chkSame.addEventListener('change', () => {
-      sameImage = chkSame.checked;
-      // in same-image mode keep only 1 file
-      if (sameImage && multiFiles.length > 1) {
-        multiFiles = [multiFiles[0]];
-      }
-      updateDropZoneUI();
-      renderMultiPreview();
-    });
-
-    // --- Add files ---
-    async function addMultiFiles(fileList) {
-      for (const f of fileList) {
-        if (!isImg(f)) continue;
-        if (sameImage) {
-          multiFiles = [f]; // only keep 1
-          break;
+      // --- Add files ---
+      async function addMultiFiles(fileList) {
+        for (const f of fileList) {
+          if (!isImg(f)) continue;
+          if (sameImage) {
+            multiFiles = [f]; // only keep 1
+            break;
+          }
+          const dup = multiFiles.some(x => x.name === f.name && x.size === f.size);
+          if (!dup) multiFiles.push(f);
         }
-        const dup = multiFiles.some(x => x.name === f.name && x.size === f.size);
-        if (!dup) multiFiles.push(f);
-      }
-      renderMultiPreview();
-    }
-
-    // --- Render preview ---
-    function renderMultiPreview() {
-      const cols = colsForCount(gridCount);
-      previewGrid.style.gridTemplateColumns = `repeat(${cols},1fr)`;
-      previewGrid.innerHTML = '';
-
-      // In same-image mode show the 1 image repeated gridCount times (read-only)
-      const displayFiles = sameImage && multiFiles.length === 1
-        ? Array(gridCount).fill(multiFiles[0])
-        : multiFiles;
-
-      displayFiles.forEach((file, i) => {
-        const url  = URL.createObjectURL(file);
-        const item = document.createElement('div');
-        item.className = 'multi-preview-item';
-        // Only show remove btn if not in same-image mode (or on first real item)
-        const showRemove = !sameImage || i === 0;
-        item.innerHTML = `
-          <img src="${url}" alt="">
-          ${showRemove ? '<button class="remove-btn" title="Quitar">✕</button>' : ''}
-        `;
-        if (showRemove) {
-          item.querySelector('.remove-btn').addEventListener('click', e => {
-            e.stopPropagation();
-            URL.revokeObjectURL(url);
-            multiFiles.splice(sameImage ? 0 : i, 1);
-            renderMultiPreview();
-          });
-        }
-        previewGrid.appendChild(item);
-      });
-
-      // Empty slots (only if NOT same-image mode, or same-image with no file yet)
-      if (!sameImage) {
-        const empties = Math.max(0, gridCount - multiFiles.length);
-        for (let k = 0; k < empties; k++) {
-          const slot = document.createElement('div');
-          slot.className = 'slot-empty';
-          slot.textContent = '+';
-          previewGrid.appendChild(slot);
-        }
-      } else if (multiFiles.length === 0) {
-        for (let k = 0; k < gridCount; k++) {
-          const slot = document.createElement('div');
-          slot.className = 'slot-empty';
-          slot.textContent = '+';
-          previewGrid.appendChild(slot);
-        }
+        renderMultiPreview();
       }
 
-      btnMultiPdf.disabled = multiFiles.length === 0;
-    }
-
-    // --- File input & drag-drop ---
-    multiInput.addEventListener('change', () => {
-      addMultiFiles(multiInput.files);
-      multiInput.value = '';
-    });
-    multiDrop.addEventListener('dragover', e => {
-      e.preventDefault();
-      multiDrop.classList.add('dragover');
-    });
-    multiDrop.addEventListener('dragleave', () => multiDrop.classList.remove('dragover'));
-    multiDrop.addEventListener('drop', e => {
-      e.preventDefault();
-      multiDrop.classList.remove('dragover');
-      addMultiFiles(e.dataTransfer.files);
-    });
-
-    // --- Clear ---
-    btnMultiClr.addEventListener('click', () => {
-      multiFiles = [];
-      multiStatus.className = 'status';
-      multiStatus.innerHTML = '';
-      renderMultiPreview();
-    });
-
-    // --- PDF generation ---
-    btnMultiPdf.addEventListener('click', async () => {
-      if (multiFiles.length === 0) return;
-
-      if (typeof window.jspdf === 'undefined') {
-        showMultiStatus('error', '⚠️', 'jsPDF no cargó. Verifica tu conexión y recarga la página.');
-        return;
-      }
-
-      btnMultiPdf.disabled = true;
-      showMultiStatus('info', '', `Preparando mosaico de ${gridCount} fotos/pág… 🌷`);
-
-      try {
-        const { jsPDF } = window.jspdf;
-
-        // Page dimensions (mm)
-        const PW = landscape ? 297 : 210;
-        const PH = landscape ? 210 : 297;
-        const MARGIN = 4;
-
+      // --- Render preview ---
+      function renderMultiPreview() {
         const cols = colsForCount(gridCount);
-        const rows = Math.ceil(gridCount / cols);
-        const cellW = (PW - (cols + 1) * MARGIN) / cols;
-        const cellH = (PH - (rows + 1) * MARGIN) / rows;
+        previewGrid.style.gridTemplateColumns = `repeat(${cols},1fr)`;
+        previewGrid.innerHTML = '';
 
-        const orient = landscape ? 'landscape' : 'portrait';
-        const pdf = new jsPDF({ unit: 'mm', format: 'a4', orientation: orient });
-
-        // Build the effective file list for PDF
-        const effectiveFiles = sameImage
+        // In same-image mode show the 1 image repeated gridCount times (read-only)
+        const displayFiles = sameImage && multiFiles.length === 1
           ? Array(gridCount).fill(multiFiles[0])
           : multiFiles;
 
-        // Process in batches of gridCount
-        for (let start = 0; start < effectiveFiles.length; start += gridCount) {
-          const batch = effectiveFiles.slice(start, start + gridCount);
-          if (start > 0) pdf.addPage();
+        displayFiles.forEach((file, i) => {
+          const url = URL.createObjectURL(file);
+          const item = document.createElement('div');
+          item.className = 'multi-preview-item';
+          // Only show remove btn if not in same-image mode (or on first real item)
+          const showRemove = !sameImage || i === 0;
+          item.innerHTML = `
+          <img src="${url}" alt="">
+          ${showRemove ? '<button class="remove-btn" title="Quitar">✕</button>' : ''}
+        `;
+          if (showRemove) {
+            item.querySelector('.remove-btn').addEventListener('click', e => {
+              e.stopPropagation();
+              URL.revokeObjectURL(url);
+              multiFiles.splice(sameImage ? 0 : i, 1);
+              renderMultiPreview();
+            });
+          }
+          previewGrid.appendChild(item);
+        });
 
-          for (let b = 0; b < batch.length; b++) {
-            const file    = batch[b];
-            const dataURL = await fileToDataURLMulti(file);
-            const fmt     = file.type === 'image/png' ? 'PNG' : 'JPEG';
-            const col     = b % cols;
-            const row     = Math.floor(b / cols);
-            const x       = MARGIN + col * (cellW + MARGIN);
-            const y       = MARGIN + row * (cellH + MARGIN);
-            pdf.addImage(dataURL, fmt, x, y, cellW, cellH);
+        // Empty slots (only if NOT same-image mode, or same-image with no file yet)
+        if (!sameImage) {
+          const empties = Math.max(0, gridCount - multiFiles.length);
+          for (let k = 0; k < empties; k++) {
+            const slot = document.createElement('div');
+            slot.className = 'slot-empty';
+            slot.textContent = '+';
+            previewGrid.appendChild(slot);
+          }
+        } else if (multiFiles.length === 0) {
+          for (let k = 0; k < gridCount; k++) {
+            const slot = document.createElement('div');
+            slot.className = 'slot-empty';
+            slot.textContent = '+';
+            previewGrid.appendChild(slot);
           }
         }
 
-        const pages = sameImage ? 1 : Math.ceil(multiFiles.length / gridCount);
-        pdf.save(`mosaico-${gridCount}x-${landscape ? 'H' : 'V'}-${Date.now()}.pdf`);
-        showMultiStatus('success', '🌸',
-          `¡Mosaico listo! ${sameImage ? gridCount + ' copias' : multiFiles.length + ' foto' + (multiFiles.length > 1 ? 's' : '')} ` +
-          `en ${pages} página${pages > 1 ? 's' : ''}. 💕`);
-
-      } catch(err) {
-        console.error(err);
-        showMultiStatus('error', '😢', `Error al generar PDF: ${err.message || err}`);
+        btnMultiPdf.disabled = multiFiles.length === 0;
       }
 
-      btnMultiPdf.disabled = false;
-    });
+      // --- File input & drag-drop ---
+      multiInput.addEventListener('change', () => {
+        addMultiFiles(multiInput.files);
+        multiInput.value = '';
+      });
+      multiDrop.addEventListener('dragover', e => {
+        e.preventDefault();
+        multiDrop.classList.add('dragover');
+      });
+      multiDrop.addEventListener('dragleave', () => multiDrop.classList.remove('dragover'));
+      multiDrop.addEventListener('drop', e => {
+        e.preventDefault();
+        multiDrop.classList.remove('dragover');
+        addMultiFiles(e.dataTransfer.files);
+      });
 
-    // Initial
-    updateDropZoneUI();
-    renderMultiPreview();
+      // --- Clear ---
+      btnMultiClr.addEventListener('click', () => {
+        multiFiles = [];
+        multiStatus.className = 'status';
+        multiStatus.innerHTML = '';
+        renderMultiPreview();
+      });
 
-  })();
+      // --- PDF generation ---
+      btnMultiPdf.addEventListener('click', async () => {
+        if (multiFiles.length === 0) return;
+
+        if (typeof window.jspdf === 'undefined') {
+          showMultiStatus('error', '⚠️', 'jsPDF no cargó. Verifica tu conexión y recarga la página.');
+          return;
+        }
+
+        btnMultiPdf.disabled = true;
+        showMultiStatus('info', '', `Preparando mosaico de ${gridCount} fotos/pág… 🌷`);
+
+        try {
+          const { jsPDF } = window.jspdf;
+
+          // Page dimensions (mm)
+          const PW = landscape ? 297 : 210;
+          const PH = landscape ? 210 : 297;
+          const MARGIN = 4;
+
+          const cols = colsForCount(gridCount);
+          const rows = Math.ceil(gridCount / cols);
+          const cellW = (PW - (cols + 1) * MARGIN) / cols;
+          const cellH = (PH - (rows + 1) * MARGIN) / rows;
+
+          const orient = landscape ? 'landscape' : 'portrait';
+          const pdf = new jsPDF({ unit: 'mm', format: 'a4', orientation: orient });
+
+          // Build the effective file list for PDF
+          const effectiveFiles = sameImage
+            ? Array(gridCount).fill(multiFiles[0])
+            : multiFiles;
+
+          // Process in batches of gridCount
+          for (let start = 0; start < effectiveFiles.length; start += gridCount) {
+            const batch = effectiveFiles.slice(start, start + gridCount);
+            if (start > 0) pdf.addPage();
+
+            for (let b = 0; b < batch.length; b++) {
+              const file = batch[b];
+              const dataURL = await fileToDataURLMulti(file);
+              const fmt = file.type === 'image/png' ? 'PNG' : 'JPEG';
+              const col = b % cols;
+              const row = Math.floor(b / cols);
+              const x = MARGIN + col * (cellW + MARGIN);
+              const y = MARGIN + row * (cellH + MARGIN);
+              pdf.addImage(dataURL, fmt, x, y, cellW, cellH);
+            }
+          }
+
+          const pages = sameImage ? 1 : Math.ceil(multiFiles.length / gridCount);
+          pdf.save(`mosaico-${gridCount}x-${landscape ? 'H' : 'V'}-${Date.now()}.pdf`);
+          showMultiStatus('success', '🌸',
+            `¡Mosaico listo! ${sameImage ? gridCount + ' copias' : multiFiles.length + ' foto' + (multiFiles.length > 1 ? 's' : '')} ` +
+            `en ${pages} página${pages > 1 ? 's' : ''}. 💕`);
+
+        } catch (err) {
+          console.error(err);
+          showMultiStatus('error', '😢', `Error al generar PDF: ${err.message || err}`);
+        }
+
+        btnMultiPdf.disabled = false;
+      });
+
+      // Initial
+      updateDropZoneUI();
+      renderMultiPreview();
+
+    })();
 
   </script>
 </body>
